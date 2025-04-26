@@ -1,0 +1,39 @@
+[
+	{
+		"id": 1,
+		"name": "resume",
+		"url": "/resume",
+		"target": "_self",
+		"icon": "resume"
+	},
+	{
+		"id": 2,
+		"name": "twitter",
+		"url": "https://x.com/Namxn27",
+		"target": "_blank",
+		"icon": "twitter"
+	},
+	{
+		"id": 3,
+		"name": "github",
+		"url": "https://github.com/nmnjain",
+		"target": "_blank",
+		"icon": "github"
+	},
+	
+	{
+		"id": 4,
+		"name": "linkedin",
+		"url": "https://www.linkedin.com/in/naman-jain-352512250/",
+		"target": "_blank",
+		"icon": "linkedin"
+	},
+	{
+		"id": 5,
+		"name": "email",
+		"url": "mailto:jainnaman2774@gmail.com",
+		"target": "_blank",
+		"icon": "email"
+	}
+
+]

@@ -1,0 +1,19 @@
+[
+	{
+		"id": 1,
+		"title": "Niti-Nirman",
+		"description": "AI powered Government scheme finder based on user profile",
+		"link": "https://github.com/nmnjain/Niti-nirman"
+	},
+	{
+		"id": 2,
+		"title": "Cognito",
+		"description": "ML Based Face recognition and attendance system",
+		"link": "https://github.com/nmnjain/cognito"
+	},
+	{
+		"id": 3,
+		"title": "Health-Sphere",
+		"description": "Virtual medical profile creator and record keeper",
+		"link": "https://github.com/lakshaybhushan/kalakunj"
+	}]

@@ -1,0 +1,98 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+import { RiArrowRightUpLine } from "react-icons/ri";
+import projectsData from "../constants/projects.json";
+import socialsData from "../constants/socials.json";
+import ProjectCard from "../components/ProjectCard.astro";
+import { PiLightbulbFill } from "react-icons/pi";
+import achievements from "../constants/achievements.json";
+
+
+const projects = projectsData;
+const socials = socialsData;
+---
+
+<Layout title="Naman Jain">
+<div class="relative">
+<div class="absolute right-0 top-0 w-20 h-20 rounded-full overflow-hidden border-2 border-primary">
+	<img src="/images/profile.jpg" alt="Naman Jain" class="w-full h-full object-cover" />
+</div>
+	<h1 class="text-primary font-serif text-[2.5rem] tracking-tight">Naman Jain</h1>
+	<div class="flex items-center gap-1.5 font-medium tracking-tight">
+		
+		<div class="bg-title mt-1.5 h-1 w-1 rounded"></div>
+		<h2 class="text-title text-base">Developer</h2>
+		
+	</div>
+	
+	<p class="bio pt-4 text-sm">
+		If you were to ask me who I am, I’d say I’m a <span class="text-black">final year computer science student at VIT Bhopal</span>, passionate about tech, design, and the process of building things that just work. I like to keep things <span class="text-black">clean and functional</span> —whether it’s writing code or crafting intuitive user experiences. I’m always exploring new ideas, learning as I go, and looking for ways to improve what already exists. I enjoy breaking down problems and shaping solutions that feel <span class="text-black">smooth, thoughtful, and meaningful</span> .I might still be figuring out the exact direction I want to follow, but one thing’s clear: I love the process of creating, refining, and making things better, one step at a time.
+	</p>
+
+	<div class="socials grid w-fit grid-cols-3 gap-2 pt-4 tracking-tight md:flex md:flex-row md:items-start">
+		{
+			socials.map((social) => (
+				<a
+					href={social.url}
+					target={social.target}
+					rel={social.target === "_blank" ? "noopener noreferrer" : undefined}
+					class="group md:hover:text-primary flex items-center underline-offset-4 transition duration-150 ease-in-out md:hover:underline">
+					<Icon name={social.icon} size={14} class="mr-1.5" />
+					<span class="text-sm">{social.name}</span>
+					<RiArrowRightUpLine className="opacity-0 transition-opacity duration-150 md:group-hover:opacity-100" />
+				</a>
+			))
+		}
+	</div>
+
+	<section class="pt-8">
+		<h2 class="text-title font-medium tracking-tight">Projects</h2>
+		<div class="pt-1.5 ">
+		
+			{projects.map((project) => <ProjectCard project={project} />)}
+		</div>
+		<div class="group">
+			
+		</div>
+	</section>
+
+	<section class="pt-8">
+	<h2 class="text-title font-medium tracking-tight mb-4">Achievements</h2>
+	<div class="pt-1.5">
+		{achievements.map((achievement) => (
+			<div
+				key={achievement.id}
+				class="group mb-3 rounded-md px-2 py-1 transition-all duration-300 ease-in-out hover:bg-hoverColor/60"
+			>
+				<a class="block">
+					<h3 class="text-base font-semibold text-primary group-hover:underline group-hover:underline-offset-2">
+						{achievement.title}
+					</h3>
+					<p class="text-body text-sm">{achievement.description}</p>
+				</a>
+			</div>
+		))}
+	</div>
+</section>
+
+<p
+				class="border-body/20 bg-hoverColor/60 text-body mt-4 w-fit rounded-md border px-2 py-1 text-xs transition-all duration-300 ease-in-out">
+				<PiLightbulbFill
+					className="md:group-hover:text-primary -mt-0.5 inline-block transition-all duration-300 ease-in-out"
+				/>
+				Feel free to explore my
+				<a
+					href="https://github.com/nmnjain?tab=repositories"
+					rel="noopenner noreferrer"
+					target="_blank"
+					class="text-body md:hover:text-primary md:group-hover:text-primary font-medium underline underline-offset-2 transition-all duration-150 ease-in-out"
+					>GitHub</a
+				> for more projects.
+			</p>
+
+
+
+
+	</div>
+</Layout>
