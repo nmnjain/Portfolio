@@ -6,11 +6,17 @@
 	},
 	{
 		"id": 2,
+		"title": "International Quant Championship 2025",
+		"description": "Ranked top 20% globally out of 75k+ teams in IQC 2025 "
+
+	}, 
+	{
+		"id": 3,
 		"title": "Hall of Fame Hacktoberfest’23"
 
 	},
 	{
-		"id": 3,
+		"id": 4,
 		"title": "Google Cloud Skill Boost",
 		"description": "Achieved 20+ skill badges in Google Cloud Platform"
 	}
